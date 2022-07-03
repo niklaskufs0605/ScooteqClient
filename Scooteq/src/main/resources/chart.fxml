@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" minHeight="400" minWidth="600" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mechanitis.demo.stockui.Controller.ChartController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <AnchorPane minHeight="600" minWidth="800.0">
+      <children>
+
+
+          <Pane fx:id="loginPane" layoutY="125" minHeight="400.0" minWidth="600.0" >
+              <children>
+                  <TextField fx:id="LoginTextField" alignment="CENTER" layoutX="300" layoutY="90.0" minWidth="200" promptText="Username" />
+                  <PasswordField fx:id="loginPasswordField" alignment="CENTER" layoutX="300.0" layoutY="125.0" minWidth="200" promptText="Password" />
+                  <Button alignment="CENTER_RIGHT" layoutX="377.0" layoutY="165.0" onAction="#onLoginbuttonClick" snapToPixel="false" text="Login" />
+                  <Label fx:id="welcomeText" alignment="CENTER" layoutX="300.0" layoutY="65.0" prefHeight="20.0" prefWidth="200.0" textAlignment="CENTER" />
+                  <Label layoutX="340.0" layoutY="200.0" onMouseClicked="#goToRegister" text="Dont have an Account?" textAlignment="CENTER" />
+              </children>
+          </Pane>
+
+          <Pane fx:id="registerPane" layoutY="125" minHeight="400.0" minWidth="600.0" visible="false">
+              <TextField fx:id="RegisterFirstNameField" alignment="CENTER" layoutX="300" layoutY="90.0" minWidth="200" promptText="Firstname" />
+              <TextField fx:id="RegisterLastNameField" alignment="CENTER" layoutX="300" layoutY="120.0" minWidth="200" promptText="Lastname" />
+              <TextField fx:id="RegisterUsernameField" alignment="CENTER" layoutX="300" layoutY="150.0" minWidth="200" promptText="Username" />
+              <PasswordField fx:id="RegisterPasswordField" alignment="CENTER" layoutX="300.0" layoutY="180.0" minWidth="200" promptText="Password" />
+              <Button alignment="BOTTOM_CENTER" layoutX="370.0" layoutY="220.0" mnemonicParsing="false" onAction="#onRegisterButtonClick" text="Register" />
+              <Label fx:id="RegisterWelcomeText" alignment="CENTER" layoutX="300.0" layoutY="70.0" prefHeight="20.0" prefWidth="200.0" textAlignment="CENTER" />
+              <Label layoutX="335.0" layoutY="250.0" onMouseClicked="#goToLogin" text="Already have an Account?" textAlignment="CENTER" />
+
+          </Pane>
+         <Pane fx:id="functionsPane" layoutY="125" minHeight="400.0" minWidth="600.0" visible="false">
+            <children>
+               <TextField fx:id="minuteField" alignment="CENTER" layoutX="366.0" layoutY="74.0" prefHeight="25.0" prefWidth="52.0" />
+               <TextField fx:id="secondField" alignment="TOP_CENTER" layoutX="366.0" layoutY="109.0" prefHeight="25.0" prefWidth="52.0" />
+               <Button alignment="BOTTOM_CENTER" layoutX="395.0" layoutY="155.0" mnemonicParsing="false" onAction="#onCalculateButtonClick" text="Button" />
+               <Label layoutX="423.0" layoutY="78.0" text="Minuten" />
+               <Label layoutX="423.0" layoutY="113.0" text="Sekunden" />
+            </children></Pane>
+
+
+
+
+      </children>
+   </AnchorPane>
+
+
+
+</VBox>
